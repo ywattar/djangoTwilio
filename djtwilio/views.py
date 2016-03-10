@@ -10,9 +10,9 @@ def gather_digits(request):
     twilio_response = Response()
 
     with twilio_response.gather(action='/respond/', numDigits=1) as g:
-        g.say('OMAR ALHELU Omar Alhelu, two to receive an SMS')
+        g.say('Press one to hear a song, two to receive an SMS')
         g.pause(length=1)
-        g.say('Jawad jawad, two to receive an SMS')
+        g.say('Press one to hear a song, two to receive an SMS')
 
     return twilio_response
 
@@ -29,7 +29,7 @@ def handle_response(request):
     if digits == '2':
         number = request.POST.get('From', '')
         twilio_response.say('A text message is on its way')
-        twilio_response.sms('You looking lovely today!', to=number)
+        twilio_response.sms('You looking lovely today!', to='+15194977794')
 
     return twilio_response
 
