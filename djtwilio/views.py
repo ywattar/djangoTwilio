@@ -29,7 +29,7 @@ def handle_response(request):
     if digits == '2':
         number = request.POST.get('From', '')
         twilio_response.say('A text message is on its way')
-        twilio_response.sms('You looking lovely today!', to='+15194977794')
+        twilio_response.sms('You looking lovely today!', to='+15194045869')
 
     return twilio_response
 
