@@ -59,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/djtwilio/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6549391">
-              <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+              <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -629,7 +629,7 @@
     <entry file="file://$PROJECT_DIR$/djtwilio/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6549391">
-          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+          <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
