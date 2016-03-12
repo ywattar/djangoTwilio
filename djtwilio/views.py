@@ -24,7 +24,9 @@ def handle_response(request):
     twilio_response = Response()
 
     if digits == '1':
-        twilio_response.play('http://bit.ly/phaltsw')
+        twilio_response.say('A text message is on its way')
+        twilio_response.sms('You looking lovely today!',to='5194045869')
+
 
     if digits == '2':
         number = request.POST.get('From', '')
