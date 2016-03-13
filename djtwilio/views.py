@@ -10,9 +10,9 @@ def gather_digits(request):
     twilio_response = Response()
 
     with twilio_response.gather(action='/respond/', numDigits=1) as g:
-        g.say('Press one to Notify Yaser, or  press two to call Nazih')
+        g.say('Press one to Notify Yaser, or  press two to notify Nazih')
         g.pause(length=1)
-        g.say('Press one to notify  Yaser, or press two to call Nazih')
+        g.say('Press one to notify  Yaser, or press two to notify Nazih')
 
     return twilio_response
 
