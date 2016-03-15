@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_twilio',
+    'push_notifications',
     'blog',
 ]
 
@@ -121,5 +122,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#Generated from my Twilio account
 TWILIO_ACCOUNT_SID ='AC6a291ea78e0e2a5056c70a49c8f1a318'
 TWILIO_AUTH_TOKEN = '992d95b7a8317f98aad08f5f5fa8374d'
+
+#Generated from my project on Google
+PUSH_NOTIFICATIONS_SETTINGS =  {
+    'GCM_API_KEY' :  'AIzaSyBrt5s6nExZORq_gppAnz04CVliIkkWXfk' ,
+}
