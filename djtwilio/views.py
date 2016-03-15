@@ -25,7 +25,8 @@ def handle_response(request):
 
     if digits == '1':
         twilio_response.say('A text message is on its way')
-        twiml.Response.message("Test bulk notification")
+        r = twiml.Response()
+        r.message('Thanks for the SMS message!')
 
 
     if digits == '2':
