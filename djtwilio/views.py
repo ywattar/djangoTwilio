@@ -25,9 +25,7 @@ def handle_response(request):
 
     if digits == '1':
         twilio_response.say('A text message is on its way')
-        r = twiml.Response()
-        r.message('Thanks for the SMS message!')
-
+        twilio_response.sms('You got paged!',to='2266068196')
 
     if digits == '2':
         twilio_response.say('A text message is on its way')
