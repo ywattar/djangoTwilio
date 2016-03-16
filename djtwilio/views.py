@@ -31,7 +31,8 @@ def handle_response(request):
 
     if digits == '1':
         twilio_response.say('A text message is on its way')
-        device.send_message("You've got mail")
+        device.send_message("You've got paged!")
+        device.send_message(None,badge=1,extra={"delivery_receipt_requested": "true"})
 
 
     if digits == '2':
