@@ -1,5 +1,8 @@
 from django_twilio.decorators import twilio_view
+from push_notifications.admin import DeviceAdmin
 from twilio import twiml
+from push_notifications.models import APNSDevice, GCMDevice
+
 
 
 from twilio.twiml import Response
@@ -19,13 +22,17 @@ def gather_digits(request):
 @twilio_view
 def handle_response(request):
 
+    device = GCMDevice.objects.get(registration_id='eLO4byN9NXU:APA91bGhB5imqa5xPX3Nj-iGSLqbAHgVD9RQYGehjHXt68wphY-Jsm_oJyk9OGJwsO39zhieN7Cr-iuRxKja8IVbt4wwQ-193ZchLCQ2ICTF1h7K59vFBf_B5QtkHapdDD4_RM_kU4O0')
+
+
     digits = request.POST.get('Digits', '')
 
     twilio_response = Response()
 
     if digits == '1':
         twilio_response.say('A text message is on its way')
-        twilio_response.sms('You got paged!',to='5194977794')
+        device.send_message("You've got mail")
+
 
     if digits == '2':
         twilio_response.say('A text message is on its way')
