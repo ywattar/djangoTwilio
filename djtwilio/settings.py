@@ -129,5 +129,7 @@ TWILIO_AUTH_TOKEN = '992d95b7a8317f98aad08f5f5fa8374d'
 
 #Generated from my project on Google
 PUSH_NOTIFICATIONS_SETTINGS =  {
-    'GCM_API_KEY' :  'AIzaSyBrt5s6nExZORq_gppAnz04CVliIkkWXfk' ,
+   # 'GCM_API_KEY' :  'AIzaSyBrt5s6nExZORq_gppAnz04CVliIkkWXfk' ,
+    'GCM_API_KEY' :'AIzaSyAP1XLr9Xqqx9IPIoP8IkZqOOZlHDg3siQ',
+
 }
