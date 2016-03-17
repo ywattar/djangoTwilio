@@ -2,9 +2,6 @@ from django_twilio.decorators import twilio_view
 from push_notifications.admin import DeviceAdmin
 from twilio import twiml
 from push_notifications.models import APNSDevice, GCMDevice
-
-
-
 from twilio.twiml import Response
 
 @twilio_view
@@ -31,8 +28,8 @@ def handle_response(request):
 
     if digits == '1':
         twilio_response.say('A text message is on its way')
-        device.send_message("You've got paged!")
-        device.send_message(None,badge=1,extra={"delivery_receipt_requested": "true"})
+        device.send_message("You've got paged!", badge=1, extra={"delivery_receipt_requested": "true"})
+
 
 
     if digits == '2':
