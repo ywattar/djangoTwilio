@@ -1,7 +1,6 @@
 from django.http import HttpResponse
 from django_twilio.decorators import twilio_view
 from push_notifications.admin import DeviceAdmin
-from rdflib.plugins.sparql.operators import string
 from twilio import twiml
 from push_notifications.models import APNSDevice, GCMDevice
 from twilio.twiml import Response
