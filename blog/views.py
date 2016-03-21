@@ -1,4 +1,10 @@
 from django.shortcuts   import render
 
 def home (request):
-    return render(request,"home.html",{})
+    print ("views")
+    title="Yaser Alwattar :) %s" % (request.user)
+    print(request.user)
+    context={
+        "title" : title
+    }
+    return render(request,"home.html",context)

@@ -1,5 +1,7 @@
+from django.http import HttpResponse
 from django_twilio.decorators import twilio_view
 from push_notifications.admin import DeviceAdmin
+from rdflib.plugins.sparql.operators import string
 from twilio import twiml
 from push_notifications.models import APNSDevice, GCMDevice
 from twilio.twiml import Response
@@ -28,7 +30,7 @@ def handle_response(request):
 
     if digits == '1':
         twilio_response.say('A text message is on its way')
-        device.send_message("You've got paged!", badge=1, extra={"delivery_receipt_requested": "true"})
+        device.send_message("You've got paged!",content_available=True)
 
 
 
@@ -44,3 +46,12 @@ def reply_to_sms_messages(request):
     r = twiml.Response()
     r.message('Thanks for the SMS message!')
     return r
+
+@twilio_view
+def delivered_receipt (request):
+    print ("Hellllllllllllllooooooooooooo")
+    if request.method == 'POST':
+        msgId= string (request.POST["msgId"])
+        print ('Message ID'+request.POST.get('msgId'))
+        return HttpResponse("Message has delivered!")
+    return HttpResponse("not delivered")

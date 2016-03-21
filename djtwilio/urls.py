@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^gather/$', 'djtwilio.views.gather_digits'),
     url(r'^respond/$', 'djtwilio.views.handle_response'),
     url(r'^$','blog.views.home',name='views'),
+    url(r'^delivered/$','djtwilio.views.delivered_receipt')
 ]
