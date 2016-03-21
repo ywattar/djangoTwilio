@@ -50,5 +50,4 @@ def reply_to_sms_messages(request):
 def delivered_receipt (request):
     print ("Hellllllllllllllooooooooooooo")
     request.POST["msgId"]
-    print ('Message ID'+request.POST.get('msgId'))
     return HttpResponse("Message has delivered!")
