@@ -50,7 +50,7 @@ def reply_to_sms_messages(request):
 def delivered_receipt (request):
     print ("Hellllllllllllllooooooooooooo")
     if request.method == 'POST':
-        msgId= string (request.POST["msgId"])
+        msgId= request.POST["msgId"]
         print ('Message ID'+request.POST.get('msgId'))
         return HttpResponse("Message has delivered!")
     return HttpResponse("not delivered")
