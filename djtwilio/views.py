@@ -49,7 +49,7 @@ def reply_to_sms_messages(request):
 @twilio_view
 def delivered_receipt (request):
     print ("Hellllllllllllllooooooooooooo")
-    if request.method == 'POST':
+    if request.method == "POST":
         msgId= request.POST["msgId"]
         print ('Message ID'+request.POST.get('msgId'))
         return HttpResponse("Message has delivered!")
